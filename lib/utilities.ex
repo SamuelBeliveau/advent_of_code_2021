@@ -3,6 +3,6 @@ defmodule AOC.Utilities do
     {:ok, contents} = File.read(path)
 
     contents
-    |> String.split("\n", trim: true)
+    |> String.split(~r/[\n|\r\n]/, trim: true)
   end
 end
